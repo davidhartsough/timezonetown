@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Form from "./Form";
+import Table from "./Table";
+import { isValidList, parseA } from "./parse-qs";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const a = urlParams.get("a");
+  if (a) {
+    if (isValidList(a)) {
+      const b = urlParams.get("b");
+      const youBusy = b === "1";
+      return <Table a={parseA(a)} youBusy={youBusy} />;
+    }
+  }
+  if (urlParams.size > 0) {
+    window.location.search = "";
+  }
+  return <Form />;
 }
-
-export default App;

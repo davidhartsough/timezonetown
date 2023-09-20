@@ -1,0 +1,82 @@
+/*
+green: #cfc;
+yellow: #ffc;
+pink: #fcf;
+red: #fdc;
+orange: #fec;
+purple: #dcf;
+blue: #cef;
+*/
+.hour {
+  color: #000;
+}
+.hour p {
+  margin: 0;
+}
+.h-1am,
+.h-2am,
+.h-3am,
+.h-4am,
+.h-5am,
+.h-12am {
+  background-color: #fcc;
+  /* background-color: #fdc; */
+}
+.h-6am,
+.h-7am,
+.h-8am,
+.h-10pm,
+.h-11pm {
+  background-color: #f6ffcc;
+  /* background-color: #ffc; */
+}
+.h-10am,
+.h-11am,
+.h-12pm,
+.h-1pm,
+.h-2pm,
+.h-3pm,
+.h-4pm,
+.h-5pm {
+  background-color: #cfc;
+}
+.h-6pm,
+.h-8pm {
+  background-color: #cfe;
+}
+.h-7pm {
+  background-color: #cff;
+  /* background-color: #cef; */
+}
+.h-9am,
+.h-9pm {
+  background-color: #e6ffcc;
+  /* background-color: #dfc; */
+}
+.busy .h-9am,
+.busy .h-10am,
+.busy .h-11am,
+.busy .h-12pm,
+.busy .h-1pm,
+.busy .h-2pm,
+.busy .h-3pm,
+.busy .h-4pm {
+  /* background-color: #fcd; */
+  background-color: #fec;
+}
+.busy .h-5pm {
+  background-color: #fff6cc;
+}
+/* extras */
+.col-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.col-header p {
+  line-height: 1;
+  margin: 0;
+}
+.days {
+  margin-top: 0.25rem;
+}
