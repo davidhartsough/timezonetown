@@ -9,17 +9,18 @@ export default function useApproxLocale() {
   const [loc, setLoc] = useState(getBackup() || "...");
   useEffect(() => {
     if (loc === "...") {
-      fetch("http://ip-api.com/json/?fields=status,city")
+      fetch("https://geolocation-db.com/json/")
         .then((res) => res.json())
-        .then((data) => {
-          if (data.status === "success") {
-            const approxLoc = `~${data.city}`;
+        .then(({ city }) => {
+          if (city && typeof city === "string" && city.length > 0) {
+            const approxLoc = `~${city}`;
             setBackup(approxLoc);
             setLoc(approxLoc);
           } else {
             setLoc("");
           }
-        });
+        })
+        .catch(() => setLoc(""));
     }
   }, [loc]);
   return loc;
