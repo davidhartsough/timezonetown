@@ -11,7 +11,7 @@ function isValidItem(i: string): boolean {
 }
 
 export function isValidList(a: string): boolean {
-  return a.length >= 4 && a.split("-").every(isValidItem);
+  return a.length >= 2 && a.split("-").every(isValidItem);
 }
 
 export function parseA(a: string): string[][] {
