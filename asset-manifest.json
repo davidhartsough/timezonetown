@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/timezonetown/static/css/main.57e1d4f1.css",
-    "main.js": "/timezonetown/static/js/main.2cd96cc3.js",
+    "main.js": "/timezonetown/static/js/main.27897d7e.js",
     "index.html": "/timezonetown/index.html",
     "main.57e1d4f1.css.map": "/timezonetown/static/css/main.57e1d4f1.css.map",
-    "main.2cd96cc3.js.map": "/timezonetown/static/js/main.2cd96cc3.js.map"
+    "main.27897d7e.js.map": "/timezonetown/static/js/main.27897d7e.js.map"
   },
   "entrypoints": [
     "static/css/main.57e1d4f1.css",
-    "static/js/main.2cd96cc3.js"
+    "static/js/main.27897d7e.js"
   ]
 }
